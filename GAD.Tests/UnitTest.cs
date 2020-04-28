@@ -8,7 +8,7 @@ namespace GAD.Tests
         [Fact]
         public void MeaningOfLife()
         {
-            Assert.Equal(new Foo().MeaningOfLife, 42);
+            Assert.Equal(42, new Foo().MeaningOfLife);
         }
     }
 }
