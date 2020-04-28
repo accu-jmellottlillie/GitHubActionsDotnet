@@ -1,0 +1,12 @@
+{
+  "name": "gad.app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Hello, World!\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
