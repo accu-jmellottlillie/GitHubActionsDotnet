@@ -10,5 +10,11 @@ namespace GAD.Tests
         {
             Assert.Equal(42, new Foo().MeaningOfLife);
         }
+
+        [Fact]
+        public void HatersGonnaHate()
+        {
+            Assert.Equal(0, new Foo().MeaningOfLife);
+        }
     }
 }
