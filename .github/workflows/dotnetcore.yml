@@ -2,28 +2,27 @@ name: .NET Core
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, develop ]
 
 jobs:
   build:
 
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-  steps:
+    steps:
     - uses: actions/checkout@v2
-    - name: Setup Node.Js
-    uses: actions/setup-node@v1
-    with:
-      node-version: 11.x
-    run: npm test
-    working-directory: ./GAD.App
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 11.x
+    - name: Node.js Test
+      run: npm test
+      working-directory: ./GAD.App
     - name: Setup .NET Core
-    uses: actions/setup-dotnet@v1
-    with:
-      dotnet-version: 3.1.101
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.101
     - name: Install dependencies
-    run: dotnet restore
+      run: dotnet restore
     - name: Build
-    run: dotnet build --configuration Release --no-restore
-    - name: Test
-    run: dotnet test --no-restore
+      run: dotnet build --configuration Release --no-restore
